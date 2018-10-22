@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 5fb826a2e92d8ee46844b3d0c19734c7
+timeCreated: 1535194111
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Devanagari
+  fontNames:
+  - Devanagari
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

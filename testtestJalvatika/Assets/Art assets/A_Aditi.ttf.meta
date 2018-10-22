@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 48b6de43e23abf049940806249a79170
+timeCreated: 1537648193
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: A_Aditi
+  fontNames:
+  - A_Aditi
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
