@@ -65,6 +65,7 @@ public class Appmanager : MonoBehaviour {
 
     public GameObject slidingProfile;
     public GameObject slidingprofilePos;
+    public GameObject slidingprofileoripos;
     private bool slidingmenuActive;
 
     public Text profileName;
@@ -147,9 +148,9 @@ public class Appmanager : MonoBehaviour {
     public InputField areaInputField;
 
 
-    public List<string> Areaunits = new List<string>() { "माप", "Hectare", "Acre", "Decimal", "Gunta", "Bigha", "Kattha", "Square Metre", "Square Feet" };
-    public List<string> Dimensionunits = new List<string>() {"Select Units", "Metre", "Feet" };
-
+    List<string> Areaunits = new List<string>() { "माप", "Hectare", "Acre", "Decimal", "Gunta", "Bigha", "Kattha", "Square Metre", "Square Feet" };
+    List<string> Dimensionunits = new List<string>() {"Select Units", "Metre", "Feet" };
+    List<string> SelectedState = new List<string>() { "Select State", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal" };
     
 
     private float Length;
@@ -186,11 +187,12 @@ public class Appmanager : MonoBehaviour {
         Screen.fullScreen = false;
         if (curScene == "HomeScene 1")
         {
-         //  if (LengthUnit != null && BreadthUnit != null)
-         //  {
-         //      LengthUnit.AddOptions(Dimensionunits);
-         //      BreadthUnit.AddOptions(Dimensionunits);
-                AreaUnit.AddOptions(Areaunits);
+            //  if (LengthUnit != null && BreadthUnit != null)
+            //  {
+            //      LengthUnit.AddOptions(Dimensionunits);
+            //      BreadthUnit.AddOptions(Dimensionunits);
+            // AreaUnit.AddOptions(Areaunits);
+            populateAreaList();
            // }
         }
         if (curScene == "LogInScene2")
@@ -205,6 +207,7 @@ public class Appmanager : MonoBehaviour {
         {
             inptfldScript = this.gameObject.GetComponent<InputFieldMovement>();
             inptfldScript.enabled = false;
+            populateStateList();
         }
         if (curScene == "credentialsenter")
         {
@@ -662,7 +665,7 @@ public class Appmanager : MonoBehaviour {
         if (curScene == "HomeScene")
         {
             
-                slidingProfile.transform.DOLocalMoveX(0, 0.35f, false);
+                slidingProfile.transform.DOLocalMoveX(slidingprofileoripos.transform.position.x, 0.35f, false);
                 slidingmenuActive = false;
             
         }
@@ -680,12 +683,11 @@ public class Appmanager : MonoBehaviour {
 
     public void OnClickDisease()
     {
-        if (curScene == "HomeScene")
-        {
+        
 
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("DiseasesMain");
 
-        }
+        
     }
 
     public void OnClickDiseaseandPrevention()
@@ -994,6 +996,12 @@ public class Appmanager : MonoBehaviour {
       //  selectedLengthnUnit.text = Dimensionunits[index];
         selectedBreadthUnit.text = Dimensionunits[index];
     }
+    public void Dropdown_IndexChangedState(int index)
+    {
+        //  selectedLengthnUnit.text = Dimensionunits[index];
+       // SelectedState.text = Dimensionunits[index];
+    }
+
 
     public void ConfirmArea()
     {
@@ -1601,5 +1609,145 @@ public class Appmanager : MonoBehaviour {
 
         
     }
+    public void onclickDiseasesMain()
+    {
+        SceneManager.LoadScene("DiseasesMain");
+    }
 
+    public void onclickD1()
+    {
+        SceneManager.LoadScene("D1");
+    }
+    public void onclickD2()
+    {
+        SceneManager.LoadScene("D2");
+    }
+    public void onclickD3()
+    {
+        SceneManager.LoadScene("D3");
+    }
+    public void onclickD4()
+    {
+        SceneManager.LoadScene("D4");
+    }
+    public void onclickD5()
+    {
+        SceneManager.LoadScene("D5");
+    }
+    public void onclickD6()
+    {
+        SceneManager.LoadScene("D6");
+    }
+    public void onclickD7()
+    {
+        SceneManager.LoadScene("D7");
+    }
+    public void onclickD11()
+    {
+        SceneManager.LoadScene("D1.1");
+    }
+    public void onclickD12()
+    {
+        SceneManager.LoadScene("D1.2");
+    }
+    public void onclickD21()
+    {
+        SceneManager.LoadScene("D2.1");
+    }
+    public void onclickD22()
+    {
+        SceneManager.LoadScene("D2.2");
+    }
+    public void onclickD23()
+    {
+        SceneManager.LoadScene("D2.3");
+    }
+    public void onclickD24()
+    {
+        SceneManager.LoadScene("D2.4");
+    }
+    public void onclickD25()
+    {
+        SceneManager.LoadScene("D2.5");
+    }
+    public void onclickD31()
+    {
+        SceneManager.LoadScene("D3.1");
+    }
+    public void onclickD32()
+    {
+        SceneManager.LoadScene("D3.2");
+    }
+    public void onclickD33()
+    {
+        SceneManager.LoadScene("D3.3");
+    }
+    public void onclickD34()
+    {
+        SceneManager.LoadScene("D3.4");
+    }
+    public void onclickD41()
+    {
+        SceneManager.LoadScene("D4.1");
+    }
+    public void onclickD42()
+    {
+        SceneManager.LoadScene("D4.2");
+    }
+    public void onclickD51()
+    {
+        SceneManager.LoadScene("D5.1");
+    }
+    public void onclickD52()
+    {
+        SceneManager.LoadScene("D5.2");
+    }
+    public void onclickD61()
+    {
+        SceneManager.LoadScene("D6.1");
+    }
+    public void onclickD62()
+    {
+        SceneManager.LoadScene("D6.2");
+    }
+    public void onclickD63()
+    {
+        SceneManager.LoadScene("D6.3");
+    }
+    public void onclickD64()
+    {
+        SceneManager.LoadScene("D6.4");
+    }
+    public void onclickD65()
+    {
+        SceneManager.LoadScene("D6.5");
+    }
+    public void onclickD66()
+    {
+        SceneManager.LoadScene("D6.6");
+    }
+    public void onclickD71()
+    {
+        SceneManager.LoadScene("D7.1");
+    }
+    public void onclickD72()
+    {
+        SceneManager.LoadScene("D7.2");
+    }
+
+    public void populateStateList()
+    {
+        stateDropdown.AddOptions(SelectedState);
+    }
+
+    public void populateAreaList()
+    {
+       // List<string> Areaunits = new List<string>() { "माप", "Hectare", "Acre", "Decimal", "Gunta", "Bigha", "Kattha", "Square Metre", "Square Feet" };
+        AreaUnit.AddOptions(Areaunits);
+    }
+
+    public void populateUnitlist()
+    {
+
+    }
 }
